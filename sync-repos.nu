@@ -21,7 +21,8 @@ def remote-head-branch []: nothing -> string {
 export def main [--force (-f)] {
     let base = $nu.home-dir | path join repos
 
-    $repos | items {|name url|
+    $repos
+    | items {|name url|
         let dir = $base | path join $name
         if not ($dir | path exists) {
             print $"  (ansi yellow)($name)(ansi reset): not found, skipping"
