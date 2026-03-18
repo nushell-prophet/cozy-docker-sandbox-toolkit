@@ -58,5 +58,5 @@ export def import [
         ^rsync -a --ignore-existing --exclude='.DS_Store' $"($project.name)/" $"($project_dst)/"
         $imported += 1
     }
-    print $"Imported ($imported) project(s) into ($dst)"
+    print $"Imported ($imported) project\(s) into ($dst)"
 }
