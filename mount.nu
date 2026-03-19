@@ -19,7 +19,7 @@ export def init []: nothing -> nothing {
 
     let repos = git-subdirs
     if ($repos | is-empty) {
-        error make { msg: 'no git repos found in subdirectories' }
+        error make {msg: 'no git repos found in subdirectories'}
     }
 
     let fresh = not ('.git' | path exists)
